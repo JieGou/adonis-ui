@@ -14,31 +14,37 @@ using System.Windows.Shapes;
 
 namespace AdonisUI.Demo.Views
 {
-    /// <summary>
-    /// Interaction logic for ControlReferenceControl.xaml
-    /// </summary>
-    [ContentProperty(nameof(ReferenceContent))]
-    public partial class ControlReferenceControl : UserControl
+  /// <summary>
+  /// Interaction logic for ControlReferenceControl.xaml
+  /// </summary>
+  [ContentProperty(nameof(ReferenceContent))]
+  public partial class ControlReferenceControl : UserControl
+  {
+    public ControlReferenceControl()
     {
-        public ControlReferenceControl()
-        {
-            InitializeComponent();
-        }
-
-        public string Title
-        {
-            get => (string)GetValue(TitleProperty);
-            set => SetValue(TitleProperty, value);
-        }
-
-        public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title", typeof(string), typeof(ControlReferenceControl), new PropertyMetadata(null));
-
-        public object ReferenceContent
-        {
-            get => (object)GetValue(ReferenceContentProperty);
-            set => SetValue(ReferenceContentProperty, value);
-        }
-
-        public static readonly DependencyProperty ReferenceContentProperty = DependencyProperty.Register("ReferenceContent", typeof(object), typeof(ControlReferenceControl), new PropertyMetadata(null));
+      InitializeComponent();
     }
+
+    public string Title
+    {
+      get => (string)GetValue(TitleProperty);
+      set => SetValue(TitleProperty, value);
+    }
+
+    public static readonly DependencyProperty TitleProperty = DependencyProperty.Register("Title",
+                                                                                          typeof(string),
+                                                                                          typeof(ControlReferenceControl),
+                                                                                          new PropertyMetadata(null));
+
+    public object ReferenceContent
+    {
+      get => (object)GetValue(ReferenceContentProperty);
+      set => SetValue(ReferenceContentProperty, value);
+    }
+
+    public static readonly DependencyProperty ReferenceContentProperty = DependencyProperty.Register("ReferenceContent",
+                                                                                                     typeof(object),
+                                                                                                     typeof(ControlReferenceControl),
+                                                                                                     new PropertyMetadata(null));
+  }
 }
