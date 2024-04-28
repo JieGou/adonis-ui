@@ -11,9 +11,7 @@ using AdonisUI.Demo.Services;
 
 namespace AdonisUI.Demo.ViewModels
 {
-    class CollectionSampleViewModel
-        : ViewModel
-        , IApplicationContentView
+    internal class CollectionSampleViewModel : ViewModel, IApplicationContentView
     {
         public string Name => "Collections";
 

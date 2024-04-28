@@ -7,10 +7,10 @@ using AdonisUI.Demo.Framework;
 
 namespace AdonisUI.Demo.ViewModels
 {
-    class ItemViewModel
-        : ViewModel
+    internal class ItemViewModel : ViewModel
     {
         private string _name;
+
         public string Name
         {
             get => _name;
@@ -47,6 +47,7 @@ namespace AdonisUI.Demo.ViewModels
         }
 
         private bool _flag;
+
         public bool Flag
         {
             get => _flag;

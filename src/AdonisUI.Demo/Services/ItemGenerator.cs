@@ -6,8 +6,7 @@ using AdonisUI.Demo.ViewModels;
 
 namespace AdonisUI.Demo.Services
 {
-    class ItemGenerator
-        : IItemGenerator
+    internal class ItemGenerator : IItemGenerator
     {
         public IEnumerable<ItemViewModel> CreateDummyItems(int count, double childCreationProbability, Random random)
         {
